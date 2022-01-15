@@ -1,0 +1,855 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,200&family=Ubuntu:ital,wght@1,300;1,400&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+ 
+}
+/* --------navbar stying------------- */
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  /* font-family:'Ubuntu', sans-serif;  */
+  font-family: "Poppins", sans-serif;
+  padding: 20px 0;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+.navbar.sticky{
+  padding: 20px 0;
+  box-shadow: 0 5px 20px rgba(0, 0,0,0.05);
+  background: #000;
+}
+.navbar .max-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo a {
+  font-size: 2.5em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #fff;
+}
+
+.navbar .logo::before{
+  content: "";
+  position: absolute;
+  width: 400px;
+  /* height: 3px; */
+  background: #111;
+  bottom: 0;
+  left: 23%;
+  transform: translateX(-50%);
+}
+.navbar .logo::after{
+  content: "Indian Institude Of Computer Science ";
+  position: absolute;
+  padding: 5px;
+  bottom:-5px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #111;
+  left: 23%;
+  transform: translateX(-50%);
+}
+.navbar.sticky .logo::after{
+  color: rgb(34, 108, 178);
+}
+.navbar .logo a span{
+  color: crimson;
+}
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+.navbar .menu li a {
+  color: #fff;
+  font-size: 1.2em;
+  margin-left: 25px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+  color: crimson;
+}
+/* ---------menu btn styling---------- */
+.menu-btn{
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  display: none;
+}
+.scroll-up-btn{
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  background: rgb(26, 35, 37);
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  color: #fff;
+  line-height: 45px;
+  z-index: 10000;
+  font-size: 2.5em;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+.scroll-up-btn.show{
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
+}
+/* --------home section styling------- */
+.home {
+  display: flex;
+  background: url("img folder/bg2.jpg") no-repeat center;
+  height: 100vh;
+  color: #fff;
+  min-height: 500px;
+  font-family: "Poppins", sans-serif;
+}
+.home .max-width {
+  margin: auto 0 200px auto;
+  text-align: right;
+}
+.home .home-content .title-1 {
+  font-size: 2.5em;
+  font-weight: 500;
+}
+.home .home-content .title-2 {
+  font-size: 3em;
+  font-weight: 600;
+  margin-left: -3px;
+}
+.home .home-content .title-3 {
+  font-size: 1.5em;
+  font-weight: 500;
+  margin: 5px 0;
+}
+.home .home-content .title-3 span {
+  color: crimson;
+}
+.home .home-content a{
+  background: firebrick;
+  display: inline-block;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 700;
+  padding: 12px 36px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid firebrick;
+  transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+  color: firebrick;
+  background: none;
+}
+
+/* ----------all simmilar stying content code----------- */
+section{
+  padding: 100px 0;
+}
+.about .about-content,
+.traningBatch .traningBatch-content,
+.courses .courses-content,
+.contact .contact-content{
+ display: flex;
+ align-items: center;
+ flex-wrap: wrap;
+ justify-content: space-between;
+}
+section .title{
+  position: relative;
+  text-align: center;
+  font-size: 3em;
+  font-weight: 700;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 3px;
+  background: #111;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+section .title::after{
+  position: absolute;
+  padding: 5px;
+  background: #fff;
+  bottom:-12px;
+  font-size: 0.4em;
+  color: firebrick;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* ---------about section start-------------- */
+
+.about .title::after{
+  content: "Our Aims";
+}
+
+.about .about-content .left{
+width: 45%;
+margin-left: -40px;
+}
+.about .about-content .left img{
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+}
+.about .about-content .right{
+  width: 55%;
+  margin-right: -20px;
+  }
+  .about .about-content .right .text{
+    font-size: 2.3em;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .about .about-content .right .text span{
+    color: firebrick;
+  }
+  .about .about-content .right p{
+    text-align: justify;
+    font-weight: bold;
+    line-height: 2;
+  }
+  .about .about-content .right a{
+    display: inline-block;
+    background: rgb(34, 108, 178);
+    color: #111;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 5px 20px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border:2px solid rgb(34, 108, 178);
+    transition: all 0.3s ease;
+  }
+  .about .about-content .right a:hover{
+    background: #111;
+    color: firebrick;
+  }
+
+ /* ------------ traning batch section styling start------------- */
+ .traningBatch, .faculty{
+   color: #fff;
+  background: #111;
+ }
+ .traningBatch .title::before,
+ .faculty .title::before{
+  background: #fff;
+ }
+ .traningBatch .title::after,
+ .faculty .title::after{
+  background: #111;
+  content: "Our Stuff";
+}
+.traningBatch .traningBatch-content .card{
+  width: calc(33% - 20px);
+  background: #222;
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px 25px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.traningBatch .traningBatch-content .card .box{
+  transition: all 0.5s ease;
+}
+.traningBatch .traningBatch-content .card:hover{
+  background: crimson;
+}
+.traningBatch .traningBatch-content .card:hover .box{
+  transform: scale(1.05);
+}
+.traningBatch .traningBatch-content .card i{
+  font-size: 3em;
+  color: crimson;
+}
+.traningBatch .traningBatch-content .card:hover i{
+  color: #fff;
+  transition: color 0.5s ease;
+}
+.traningBatch .traningBatch-content .card .text{
+  font-size: 1.3em;
+  font-weight:700;
+  margin: 10px 0 7px 0;
+  color: rgb(34, 108, 178);
+}
+.traningBatch .traningBatch-content .card:hover .text{
+  color: #111;
+  transition: color 0.5s ease;
+}
+
+/* -------------courses section styling---------- */
+.courses .title::after{
+  content: "We Provide";
+}
+.courses .courses-content .column{
+ width: calc(50% - 30px);
+ /* border: 2px solid black; */
+}
+.courses .courses-content .left .course-chart{
+ /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-evenly;
+  justify-content: space-between
+ }
+.courses .courses-content .left .text,
+.courses .courses-content .right .text{
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.courses .courses-content .right .text{
+  margin-top: 25px;
+}
+.courses .courses-content .left .text span,
+.courses .courses-content .right .text span{
+  color: firebrick;
+}
+ .courses .courses-content .left ul{
+  margin-top: 10px;
+  list-style: none;
+  line-height: 1.5;
+}
+.course-chart li{
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.course-chart .heading{
+  font-size: 1.5em;
+  font-weight: 700;
+  color:seagreen;
+}
+
+/* ------right course contain aubt testimonial------ */
+/* Slideshow container */
+ .courses .right .slideshow-container {
+  position: relative;
+  background: #222;
+}
+
+/* Slides */
+.slideshow-container .mySlides {
+  display: none;
+  padding: 50px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #717171;;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: rgb(221, 221, 221);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 17px;
+  width: 17px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+ .testimonial-container{
+  border: 2px solid #ccc;
+  background-color: #eee;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 16px 0;
+}
+ .testimonial-container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.testimonial-container img {
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+.testimonial-container span {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-right: 15px;
+}
+.testimonial-container p{
+  font-weight: 600;
+}
+.mySlides .testimonial-container .checked,
+.mySlides .testimonial-container .fa-star-half-full {
+  color: orange;
+  margin: 0;
+}
+
+ 
+/* -----------faculty section styling start------------ */
+.faculty .title::before{
+  width: 250px;
+}
+.faculty .title::after{
+  content: "Faculty we provide";
+}
+.faculty .carousel .card{
+ background: #222;
+ border-radius: 6px;
+ padding: 25px 35px;
+ text-align: center;
+ transition: all 0.5s ease;
+}
+.faculty .carousel .card:hover{
+  background: crimson;
+}
+.faculty .carousel .card .box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+.faculty .carousel .card:hover .box{
+transform: scale(1.05);
+}
+.faculty .carousel .card .text{
+  font-size: 1.4em;
+  font-weight: 600;
+  margin: 10px 0 7px 0;
+  color: rgb(6, 178, 221);
+  transition: color  0.5s ease;
+}
+.faculty .carousel .card:hover .text{
+  color: #000;
+}
+.faculty .carousel .card .text2{
+  font-size: 1em;
+  font-weight: 400;
+}
+.faculty .carousel .card img{
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border:5px solid #111;
+  transition: border 0.5s ease;
+}
+.faculty .carousel .card:hover img{
+  border: 5px solid #fff;
+} 
+.owl-dots{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.owl-dot{
+ height: 13px;
+ width: 13px;
+ margin: 0 5px;
+ outline: none!important;
+ border-radius: 50%;
+ border: 2px solid crimson!important;
+ transition: all 0.3s ease;
+}
+.owl-dot.active{
+  width: 35px;
+  border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+  background: #DC143C!important;
+}
+
+/* ----------contact section styling-------------- */
+.contact .title::after{
+  content: "Get in touch";
+}
+.contact .contact-content .column{
+  width: calc(50% - 30px);
+}
+.contact .contact-content .text{
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+  text-align: justify;
+  /* font-size: 1em; */
+  font-weight: 600;
+}
+.contact .contact-content .left .icons{
+  margin: 10px 0;
+}
+.contact .contact-content .row{
+  display: flex;
+  height: 65px;
+  align-items: center;
+  /* margin: 10px ; */
+}
+.contact .contact-content .row .info{
+  margin-left: 30px;
+}
+.contact .contact-content i{
+  font-size: 1.7em;
+}
+.contact .contact-content .info .head{
+  font-weight: 600;
+}
+.contact .contact-content .info .sub-title{
+  font-weight: 600;
+  color: #333;
+}
+
+ .contact .right form .fields{
+   display: flex;
+ }
+ .contact .right form .field,
+ .contact .right form .fields .field{
+ height: 45px;
+ width: 100%;
+ margin-bottom: 15px;
+}
+.contact .right form .name{
+  margin-right: 10px;
+}
+
+.contact .right form .textarea{
+  height: 80px;
+  width: 100%;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgray;
+  outline: none;
+  border-radius: 6px;
+  padding: 0 15px;
+  /* font-size: 1.5em; */
+  font-weight: 600;
+ } 
+ .contact .right form .field input:hover,
+.contact .right form .textarea textarea:hover{
+  border: 1px solid rgb(6, 178, 221);
+}
+ .contact .right form .textarea textarea{
+   padding-top:10px ;
+    resize: none;
+ }
+ .contact .right form .submit-btn{
+   height: 47px;
+   width: 100%;
+ }
+ .contact .right form .submit-btn button{
+   width: 100%;
+   height: 100%;
+   border: none;
+   background: rgb(6, 178, 221);
+   border: 2px solid rgb(6, 178, 221);
+   color: #fff;
+   font-size: 1.5em;
+   font-weight: 500;
+   border-radius: 6px;
+   cursor: pointer;
+   transition: all 0.5s ease;
+ }
+ .contact .right form .submit-btn button:hover{
+   color: rgb(6, 178, 221);
+   background: none;
+ }
+ 
+/* -------for social -------- */
+ .social {
+   padding: 10px 0;
+   background: #000;
+   /* height: 10%; */
+   text-align: center;
+   }
+.social .fa {
+  padding: 10px;
+  font-size: 1em;
+  width: 30px;
+  /* float: left; */
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 4px;
+  border-radius: 50%;
+}
+.social .fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+/* .admission-social {
+ 
+  float: right;
+  color: #fff;
+}
+  .admission-social .fa-phone{
+    padding: 3px;
+    margin: 0 4px;
+  } */
+/* --------------------- */
+ /* ----------footer section-------- */
+ footer{
+   padding: 20px;
+   border-top: 3px solid #39bcdd;
+   text-align: center;
+   font-size: 1.2em;
+   font-weight: 600;
+ }
+ footer a {
+   text-decoration: none;
+ }
+ footer a:hover{
+   text-decoration: underline;
+   color: #DC143C;
+ }
+
+/* ----------------responsive media query start------------------- */
+
+@media(max-width: 1300px){
+  .home .max-width {
+    margin-right: 0;
+  }
+}
+@media(max-width: 1104px){
+  .about .about-content .left img{
+    height: 350px;
+    width: 350px;
+  }
+}
+@media(max-width: 991px){
+  .max-width {
+    padding: 0 50px;
+  }
+}
+@media(max-width: 947px){
+  .navbar .logo::before {
+    left: 30%;
+  }
+  .navbar .logo::after{
+    font-size: 0.8em;
+    left: 30%;
+  }
+  .menu-btn{
+    display: block;
+    z-index: 100;
+  }
+  .menu-btn i.active:before{
+    content: "\f410";
+  }
+  .navbar .menu{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.7s ease;
+  }
+  .navbar .menu.active{
+    left: 0;
+  }
+  .navbar .menu li{
+    display: block;
+  }
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    /* margin: 5px 0; */
+    font-size: 1.5em;
+  }
+  .home .home-content .title-1 {
+    font-size: 2em;
+  }
+  .home .home-content .title-2 {
+    font-size: 2.5em;
+  }
+  .home .home-content a{
+    padding: 10px 30px;
+  }
+  .max-width {
+    max-width: 800px;
+  }
+  .about .about-content .column{
+    width: 100%;
+  }
+  .about .about-content .left{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+  }
+  .about .about-content .right{
+    flex:100%;
+    margin-right: 5px;
+  }
+  .traningBatch .traningBatch-content .card{
+    width: calc(50% - 10px);
+    height: 270px;
+    margin-bottom: 20px;
+  }
+  .courses .courses-content .column,
+  .contact .contact-content .column{
+    width: 100%;
+    /* margin-bottom: 35px; */
+   }
+}
+
+@media(max-width: 690px){
+  .max-width{
+    padding: 0 23px;
+  }
+  .navbar .logo a {
+    font-size: 2em;
+  }
+  .navbar .logo::after{
+    font-size: 0.7em;
+  }
+  .home .home-content .title-1 {
+    font-size: 1.8em;
+  }
+  .home .home-content .title-2 {
+    font-size: 2em;
+  }
+  .home .home-content .title-3 {
+    font-size: 1em;
+  }
+  .home .home-content a{
+    font-size: 0.8em;
+    padding: 8px 20px;
+  }
+  .traningBatch .traningBatch-content .card{
+    width: 100%;
+    height: auto;
+  }
+  .contact .contact-content .left .row{
+    height: 70px;
+  }
+  
+}
+
+@media(max-width: 500px){
+  .navbar .logo a {
+    font-size: 1.5em;
+  }
+  .navbar .logo::before {
+    left: 36%;
+  }
+  .navbar .logo::after{
+    font-size: 0.6em;
+    left: 36%;
+  }
+  .home .home-content .title-1 {
+    font-size: 1em;
+  }
+  .home .home-content .title-2 {
+    font-size: 1.5em;
+  }
+  .home .home-content .title-3 {
+    font-size: 0.7em;
+  }
+  .home .home-content a{
+    margin-top: 10px;
+    font-size: 0.6em;
+    padding: 5px 10px;
+  }
+  section .title{
+    font-size: 2.3em;
+  }
+  
+  .course-chart li{
+    font-size: 0.6em;
+  }
+  .course-chart .heading{
+    font-size: 1em;
+  }
+  
+}
